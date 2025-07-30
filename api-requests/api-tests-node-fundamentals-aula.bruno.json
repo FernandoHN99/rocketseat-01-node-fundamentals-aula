@@ -1,0 +1,140 @@
+{
+  "name": "01-FundamentosNodeJs",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Create User",
+      "filename": "Create User.bru",
+      "seq": 2,
+      "settings": {},
+      "tags": [],
+      "request": {
+        "url": "http://localhost:3333/users",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"id\": 1,\n  \"name\": \"Nando\",\n  \"email\": \"nandinho@gamil.com\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Delete User",
+      "filename": "Delete User.bru",
+      "seq": 4,
+      "settings": {},
+      "tags": [],
+      "request": {
+        "url": "http://localhost:3333/users/12",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "List Users",
+      "filename": "List Users.bru",
+      "seq": 2,
+      "settings": {},
+      "tags": [],
+      "request": {
+        "url": "http://localhost:3333/users?search=12",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "search",
+            "value": "12",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Update User",
+      "filename": "Update User.bru",
+      "seq": 3,
+      "settings": {},
+      "tags": [],
+      "request": {
+        "url": "http://localhost:3333/users/af95cbaa-e1cc-443e-90ff-4391577364ab",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"email\": \"teste@gmail.com\",\n  \"name\": \"TESTE\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "01-FundamentosNodeJs",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0006933212280273438,
+    "filesCount": 4
+  }
+}
