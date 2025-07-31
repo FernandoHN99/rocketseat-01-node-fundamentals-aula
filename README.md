@@ -1,71 +1,41 @@
-## Introdução
-Este projeto é uma API RESTful simples construída com Node.js puro, sem frameworks, para gerenciar usuários. Ele utiliza um arquivo JSON como banco de dados persistente e implementa operações CRUD (Create, Read, Update, Delete) para a entidade "users".
+# 👤 User Manager API - Node.js Puro
 
-## Funcionalidades
+## 📝 Descrição
 
-A API possui as seguintes rotas:
+Este projeto é uma API RESTful simples para gerenciamento de usuários, desenvolvida em Node.js puro (sem frameworks como Express).
+Ela permite criar, listar, atualizar e deletar usuários, utilizando um arquivo JSON como banco de dados persistente.
 
-### Listar Usuários
+> 💡 Projeto baseado em aulas do curso *Fundamentos do Node.js* da Rocketseat
 
-- **GET** users
-  - Lista todos os usuários.
-  - Suporta filtro por nome ou email usando o parâmetro de query `search`.
-  - Exemplo: `GET /users?search=nome`
+## ⚙️ Pré-requisitos
 
-### Criar Usuário
+* Node.js 18 ou superior instalado
 
-- **POST** users
-  - Cria um novo usuário.
-  - Corpo da requisição (JSON):
-    ```json
-    {
-      "name": "Nome do Usuário",
-      "email": "email@exemplo.com"
-    }
-    ```
+## 🚀 Como rodar o projeto
 
-### Atualizar Usuário
+1. **Inicie o servidor em modo desenvolvimento:**
 
-- **PUT** `/users/:id`
-  - Atualiza nome e email de um usuário existente.
-  - Corpo da requisição (JSON):
-    ```json
-    {
-      "name": "Novo Nome",
-      "email": "novoemail@exemplo.com"
-    }
-    ```
-
-### Deletar Usuário
-
-- **DELETE** `/users/:id`
-  - Remove um usuário pelo ID.
-
-## Como iniciar o projeto
-
-1. **Clone o repositório e acesse a pasta do projeto:**
-   ```sh
-   git clone <url-do-repositorio>
-   cd rocketseat-01-node-fundamentals-aula
-   ```
-
-2. **Instale as dependências (se houver):**
-   - Este projeto não possui dependências externas além do Node.js.
-
-3. **Inicie o servidor em modo desenvolvimento:**
    ```sh
    npm run dev
    ```
+   O servidor estará disponível em `http://localhost:3333`.
 
-4. **Acesse a API:**
-   - O servidor estará disponível em `http://localhost:3333`.
+2. **Testes de API:**
 
-## Estrutura do Projeto
+   Utilize o arquivo `api-requests/api-tests-node-fundamentals-aula.postman.json` no Postman para testar os endpoints.
 
-- server.js: Inicializa o servidor HTTP e gerencia as rotas.
-- routes.js: Define as rotas e seus handlers.
-- database.js: Implementa a persistência dos dados em db.json.
-- json.js: Middleware para tratar o corpo das requisições JSON.
-- utils: Funções utilitárias para manipulação de rotas e query params.
-- db.json: Arquivo que armazena os dados dos usuários.
 
+## 📌 Endpoints
+
+| Método | Rota         | Descrição                                                         |
+| ------ | ------------ | ----------------------------------------------------------------- |
+| GET    | `/users`     | Lista todos os usuários. Suporta filtro por `?search=nomeOuEmail` |
+| POST   | `/users`     | Cria um novo usuário com `name` e `email`                         |
+| PUT    | `/users/:id` | Atualiza o `name` e `email` de um usuário existente               |
+| DELETE | `/users/:id` | Remove um usuário pelo ID                                         |
+
+
+## 🗒️ Observações
+
+* Os dados são persistidos localmente no arquivo `db.json`.
+* O projeto utiliza apenas recursos nativos do Node.js — sem bibliotecas externas.
